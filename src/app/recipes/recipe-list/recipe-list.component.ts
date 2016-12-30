@@ -10,8 +10,11 @@ export class RecipeListComponent implements OnInit {
 
   @Output() recipeSelected = new EventEmitter<Recipe>();
 
-  recipes:Recipe[] = [];
-  recipe:Recipe = new Recipe("Recipe 1","Recipe One","http://sifatit.com/wp-content/uploads/2012/07/dummy.jpg");
+  recipes: Recipe[] = [
+    new Recipe('Schnitzel', 'Very tasty', 'http://images.derberater.de/files/imagecache/456xXXX_berater/berater/slides/WienerSchnitzel.jpg', []),
+    new Recipe('Summer Salad', 'Okayish', 'http://ohmyveggies.com/wp-content/uploads/2013/06/the_perfect_summer_salad.jpg', [])
+  ];
+  
   constructor() { }
 
   ngOnInit() {
